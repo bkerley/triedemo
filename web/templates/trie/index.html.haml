@@ -1,0 +1,7 @@
+- form_for @conn, trie_path(@conn, :format), [as: :trie_form], fn f ->
+  %p
+    = label f, :trie, "Words for trie, one word per line"
+    %br
+    = textarea f, :trie, rows: 10, cols: 80
+  %p
+    = submit "render"
